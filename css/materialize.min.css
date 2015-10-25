@@ -1624,7 +1624,7 @@ html {
   -webkit-text-size-adjust: 100%
 }
 body {
-  margin: 0
+  margin: 0px;
   background-color: #ececec;
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
@@ -1911,7 +1911,7 @@ img.responsive-img, video.responsive-video {
 .parallax-container {
   position: relative;
   overflow: hidden;
-  height: 500px
+  height: 50vh
 }
 .parallax {
   position: absolute;
@@ -1925,12 +1925,13 @@ img.responsive-img, video.responsive-video {
   display: none;
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: 0%;
   min-width: 100%;
   min-height: 100%;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   transform: translateX(-50%)
+  transform: translateY(-80%)
 }
 .pin-top, .pin-bottom {
   position: relative
@@ -2485,7 +2486,7 @@ nav ul a span.badge {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0 0.75rem
+  padding: 0 0.3rem
 }
 .row .col.s1 {
   width: 8.33333%;
