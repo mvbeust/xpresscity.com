@@ -3,7 +3,7 @@
 
 <head>
   <title>Draft City Site - xpressCity</title>
-  <meta name="description" content=""/>
+  <meta name="description" content="" />
   <!--CSS and Fonts-->
   <meta charset="UTF-8">
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -12,19 +12,40 @@
 
   <!--Mobile Optimizations-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Tippspiel">
-  <meta name="application-name" content="Tippspiel" />
-  <script src="/js/stay_standalone.js" type="text/javascript"></script>
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-title" content="xpressCity" />
+  <meta name="application-name" content="xpressCity" />
+  <script type="text/javascript" src="/js/stay_standalone.js"></script>
 </head>
 
 <body>
-
+  <header></header>
+  <main>
+    <!--Header Image for City-->
+    <div class="parallax-container">
+      <div class="parallax">
+        <img src="/img/cityid/parallax_image.jpg">
+      </div>
+    </div>
+    <!--Introduction to city-->
+    <div class="section white">
+      <div class="row container">
+        <h2>Rome</h2>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
   <!--Scripts-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="/js/materialize.min.js"></script>
+  <script>
+    //Starting the parallax for the Header Image
+    $(document).ready(function() {
+      $('.parallax').parallax();
+    });
+  </script>
 </body>
 
 </html>

@@ -1625,6 +1625,7 @@ html {
 }
 body {
   margin: 0
+  background-color: #ececec;
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block
