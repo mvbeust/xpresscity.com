@@ -21,7 +21,23 @@
 </head>
 
 <body>
-  <header></header>
+  <header>
+    <div class="navbar-fixed hide-on-small-only">
+      <nav>
+        <div class="nav-wrapper">
+          <div class="container">
+            <form>
+              <div class="input-field">
+                <input id="search" type="search" required>
+                <label for="search"><i class="material-icons">search</i></label>
+                <i class="material-icons">close</i>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
   <main>
     <!--Header Image for City-->
     <div class="parallax-container">
@@ -66,104 +82,260 @@
     </div>
     <!--END Tabs-->
     <!--Special Content in cards-->
-    <div class="container row" id="sights">
-      <!--START Sight Card-->
-      <div class="col s12 m6">
-        <div class="card">
-          <div class="card-image pickgradient">
-            <!--Image of the Sight-->
-            <img src="/img/cityid/sight1.jpg" style="display:block">
-            <!--Title of the Sight-->
-            <span class="card-title" style="z-index:10">Sight 1</span>
-          </div>
-          <div class="card-content">
-            <!--Content of the Sight-->
-            <p>This is the desrcription of sight 1</p>
-          </div>
-          <!--Additional Information of the Sight-->
-          <div class="card-section">
-            <!--Location-->
-            <a href="" style="text-transform:none" target="_blank">
-              <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">place</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Piazza del Colosseo</i>
-            </a>
-            </br>
-            <!--Phone Number-->
-            <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">call</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> +39 56 0561816518</i></br>
-            <!--Admission-->
-            <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">confirmation_number</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> No Admission</i></br>
-            <!--Wifi Availibility-->
-            <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">wifi</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> No</i></br>
-            <!--Additional Info-->
-            <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">info_outline</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> No Additional Information</i></br>
-          </div>
-          <div class="card-action">
-            <!--Links for the Sight-->
-            <a href="#">Wikipedia <i class="material-icons" style="font-size:15px; top:2px; position:relative;">open_in_new</i></a>
-            <a href="#">More Information <i class="material-icons" style="font-size:15px; top:2px; position:relative;">open_in_new</i></a>
-          </div>
-        </div>
-      </div>
-      <!--END Sight Card-->
-      <!--START Sight Card-->
-      <div class="col s12 m6">
-        <div class="card">
-          <div class="card-image pickgradient">
-            <!--Image of the Sight-->
-            <img src="/img/cityid/sight2.jpg" style="display:block">
-            <!--Title of the Sight-->
-            <span class="card-title" style="z-index:10">Sight 2</span>
-          </div>
-          <div class="card-content">
-            <!--Content of the Sight-->
-            <p>This is the desrcription of sight 2</p>
-          </div>
-          <!--Additional Information of the Sight-->
-          <div class="card-section">
-            <!--Location-->
-            <a href="" style="text-transform:none" target="_blank">
-              <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">place</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Piazza del Colosseo</i>
-            </a>
-            </br>
-            <!--Phone Number-->
-            <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">call</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> +39 56 0561816518</i></br>
-            <!--Admission-->
-            <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">confirmation_number</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> No Admission</i></br>
-            <!--Wifi Availibility-->
-            <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">wifi</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> No</i></br>
-            <!--Additional Info-->
-            <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">info_outline</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> No Additional Information</i></br>
-          </div>
-          <div class="card-action">
-            <!--Links for the Sight-->
-            <a href="#">Wikipedia <i class="material-icons" style="font-size:15px; top:2px; position:relative;">open_in_new</i></a>
-            <a href="#">More Information <i class="material-icons" style="font-size:15px; top:2px; position:relative;">open_in_new</i></a>
+    <div class="container" id="sights">
+      <div class="row" id="sightsmasonry">
+        <!--START Sight Card-->
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-image pickgradient">
+              <!--Image of the Sight-->
+              <img src="/img/cityid/sight1.jpg" style="display:block">
+              <!--Title of the Sight-->
+              <span class="card-title" style="z-index:10">Sight 1</span>
+            </div>
+            <div class="card-content">
+              <!--Content of the Sight-->
+              <p>This is the desrcription of sight 1</p>
+            </div>
+            <!--Additional Information of the Sight-->
+            <div class="card-section">
+              <!--Location-->
+              <a href="" style="text-transform:none" target="_blank">
+                <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">place</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Piazza del Colosseo</i>
+              </a>
+              </br>
+              <!--Phone Number-->
+              <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">call</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> +39 56 0561816518</i></br>
+              <!--Admission-->
+              <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">confirmation_number</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> No Admission</i></br>
+              <!--Wifi Availibility-->
+              <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">wifi</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> No</i></br>
+              <!--Additional Info-->
+              <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">info_outline</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> No Additional Information</i></br>
+            </div>
+            <div class="card-action">
+              <!--Links for the Sight-->
+              <a href="#" target="_blank">Wikipedia <i class="material-icons" style="font-size:15px; top:2px; position:relative;">open_in_new</i></a>
+              <a href="#" target="_blank">More Information <i class="material-icons" style="font-size:15px; top:2px; position:relative;">open_in_new</i></a>
+            </div>
           </div>
         </div>
+        <!--END Sight Card-->
+        <!--START Sight Card-->
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-image pickgradient">
+              <!--Image of the Sight-->
+              <img src="/img/cityid/sight2.jpg" style="display:block">
+              <!--Title of the Sight-->
+              <span class="card-title" style="z-index:10">Sight 2</span>
+            </div>
+            <div class="card-content">
+              <!--Content of the Sight-->
+              <p>This is the desrcription of sight 2</p>
+            </div>
+            <!--Additional Information of the Sight-->
+            <div class="card-section">
+              <!--Location-->
+              <a href="" style="text-transform:none" target="_blank">
+                <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">place</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Piazza del Colosseo</i>
+              </a>
+              </br>
+              <!--Phone Number-->
+              <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">call</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> +39 56 0561816518</i></br>
+              <!--Admission-->
+              <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">confirmation_number</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> No Admission</i></br>
+              <!--Wifi Availibility-->
+              <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">wifi</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> No</i></br>
+              <!--Additional Info-->
+              <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">info_outline</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> No Additional Information</i></br>
+            </div>
+            <div class="card-action">
+              <!--Links for the Sight-->
+              <a href="#" target="_blank">Wikipedia <i class="material-icons" style="font-size:15px; top:2px; position:relative;">open_in_new</i></a>
+              <a href="#" target="_blank">More Information <i class="material-icons" style="font-size:15px; top:2px; position:relative;">open_in_new</i></a>
+            </div>
+          </div>
+        </div>
+        <!--END Sight Card-->
       </div>
-      <!--END Sight Card-->
     </div>
-    <div class="container row" id="map">
-      <!--START Map Card-->
-      <div class="col s12 m12">
-        <div class="card">
-          <div class="card-content" style="height:90vh">
-            <iframe src="https://www.google.com/maps/d/embed?mid=z87f4kyq9t3o.kI-s9BuW8aXg" height="100%" width="100%"></iframe>
+    <div class="container" id="map">
+      <div class="row">
+        <!--START Map Card-->
+        <div class="col s12 m12">
+          <div class="card">
+            <div class="card-content" style="height:90vh">
+              <iframe src="https://www.google.com/maps/d/embed?mid=z87f4kyq9t3o.kI-s9BuW8aXg" height="100%" width="100%"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m12">
+          <div class="card">
+            <div class="card-content">
+              Legende
+            </div>
           </div>
         </div>
       </div>
-      <!--END Map Card-->
+      <div class="row" id="mapmasonry">
+        <!--Getting Around-->
+        <div class="col s12 m12">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title black-text">Getting Around</span>
+              <p>Best was to get around is by foot or local bus.</p>
+            </div>
+            <div class="card-action">
+              <a href="#" target="_blank">ATAC <i class="material-icons" style="font-size:15px; top:2px; position:relative;">open_in_new</i></a>
+            </div>
+          </div>
+        </div>
+        <!--END Map Card-->
+        <!--START Train-->
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content">
+              <span class="badge">
+                <i class="material-icons" style="color:#303F9F">directions_transit</i>
+              </span>
+              <p>Take Train xyz from xyz
+                <br>oöiiaernaoerganoiganoi</p>
+            </div>
+            <div class="card-action">
+              <a href="#" target="_blank">DBahn <i class="material-icons" style="font-size:15px; top:2px; position:relative;">open_in_new</i></a>
+            </div>
+          </div>
+        </div>
+        <!--END Train-->
+        <!--START Bus-->
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content">
+              <span class="badge">
+                <i class="material-icons" style="color:#303F9F">directions_bus</i>
+              </span>
+              <p>Take Bus xyz from xyz</p>
+            </div>
+            <div class="card-action">
+              <a href="#" target="_blank">Busliniensuche <i class="material-icons" style="font-size:15px; top:2px; position:relative;">open_in_new</i></a>
+            </div>
+          </div>
+        </div>
+        <!--END Bus-->
+        <!--START Car-->
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content">
+              <span class="badge">
+                <i class="material-icons" style="color:#303F9F">directions_car</i>
+              </span>
+              <p>Take Autobahn xyz from xyz</p>
+            </div>
+            <div class="card-action">
+              <a href="#" target="_blank">Google Maps <i class="material-icons" style="font-size:15px; top:2px; position:relative;">open_in_new</i></a>
+            </div>
+          </div>
+        </div>
+        <!--END Car-->
+        <!--START Plane-->
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content">
+              <span class="badge">
+                <i class="material-icons" style="color:#303F9F">flight</i>
+              </span>
+              <p>Arrive at xyz</p>
+            </div>
+            <div class="card-action">
+              <a href="#" target="_blank">kayak <i class="material-icons" style="font-size:15px; top:2px; position:relative;">open_in_new</i></a>
+            </div>
+          </div>
+        </div>
+        <!--END Plane-->
+        <!--START Boat-->
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content">
+              <span class="badge">
+                <i class="material-icons" style="color:#303F9F">directions_boat</i>
+              </span>
+              <p>Take Boat xyz from xyz</p>
+            </div>
+            <div class="card-action">
+              <a href="#" target="_blank">boatsearch <i class="material-icons" style="font-size:15px; top:2px; position:relative;">open_in_new</i></a>
+            </div>
+          </div>
+        </div>
+        <!--END Boat-->
+      </div>
     </div>
     <div class="container row" id="moresights">
+      <!--START Sight Card-->
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-image pickgradient">
+            <!--Image of the Sight-->
+            <img src="/img/cityid/sight3.jpg" style="display:block">
+            <!--Title of the Sight-->
+            <span class="card-title" style="z-index:10">Sight 3</span>
+          </div>
+          <div class="card-content">
+            <!--Content of the Sight-->
+            <p>This is the desrcription of sight 3</p>
+          </div>
+          <!--Additional Information of the Sight-->
+          <div class="card-section">
+            <!--Location-->
+            <a href="" style="text-transform:none" target="_blank">
+              <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">place</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> Piazza del Colosseo</i>
+            </a>
+            </br>
+            <!--Phone Number-->
+            <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">call</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> +39 56 0561816518</i></br>
+            <!--Admission-->
+            <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">confirmation_number</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> No Admission</i></br>
+            <!--Wifi Availibility-->
+            <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">wifi</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> No</i></br>
+            <!--Additional Info-->
+            <i class="material-icons" style="font-size:10pt; top:2px; position:relative; color: grey">info_outline</i><i style="font-style:normal; font-size:10pt; text-align:left; color:grey"> No Additional Information</i></br>
+          </div>
+          <div class="card-action">
+            <!--Links for the Sight-->
+            <a href="#" target="_blank">Wikipedia <i class="material-icons" style="font-size:15px; top:2px; position:relative;">open_in_new</i></a>
+            <a href="#" target="_blank">More Information <i class="material-icons" style="font-size:15px; top:2px; position:relative;">open_in_new</i></a>
+          </div>
+        </div>
+      </div>
+      <!--END Sight Card-->
     </div>
   </main>
   <footer></footer>
   <!--Scripts-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="/js/materialize.min.js"></script>
+  <script type="text/javascript" src="/js/masonry.pkgd.min.js"></script>
   <script>
     //Starting the parallax for the Header Image
     $(document).ready(function() {
       $('.parallax').parallax();
+    });
+  </script>
+  <script>
+    //Starting Masonry for all parts of the page after images have loaded
+    var $container = $('#mapmasonry');
+    var $container2 = $('#sightsmasonry');
+    $container.imagesLoaded(function() {
+      $container.masonry({
+        columnWidth: '.m6',
+        itemSelector: '.col',
+      });
+    });
+    $container2.imagesLoaded(function() {
+      $container2.masonry({
+        columnWidth: '.s12',
+        itemSelector: '.col',
+      });
     });
   </script>
 </body>
