@@ -1682,6 +1682,33 @@ sub {
 img {
   border: 0
 }
+.pickgradient {
+  position: relative;
+  display: inline-block;
+}
+.pickgradient:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.02) 66%, rgba(0, 0, 0, 0.73) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(65%, rgba(0, 0, 0, 0)), color-stop(66%, rgba(0, 0, 0, 0.02)), color-stop(100%, rgba(0, 0, 0, 0.73)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.02) 66%, rgba(0, 0, 0, 0.73) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.02) 66%, rgba(0, 0, 0, 0.73) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.02) 66%, rgba(0, 0, 0, 0.73) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.02) 66%, rgba(0, 0, 0, 0.73) 100%);
+  /* W3C */
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#ba000000', GradientType=0);
+  /* IE6-9 */
+}
 svg:not(:root) {
   overflow: hidden
 }
@@ -1804,9 +1831,9 @@ ul li {
   box-shadow: none !important
 }
 .z-depth-0-half, .card-panel, .card, .collapsible {
-    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.1)
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.1)
 }
 .z-depth-1, nav, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .side-nav {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
@@ -1930,8 +1957,7 @@ img.responsive-img, video.responsive-video {
   min-height: 100%;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  transform: translateX(-50%)
-  transform: translateY(-80%)
+  transform: translateX(-50%) transform: translateY(-80%)
 }
 .pin-top, .pin-bottom {
   position: relative
@@ -2442,7 +2468,7 @@ nav ul a span.badge {
 .container {
   margin: 0 auto;
   max-width: 1280px;
-  width: 90%
+  width: 95%
 }
 @media only screen and (min-width: 601px) {
   .container {
@@ -3086,25 +3112,25 @@ small {
 }
 .card-panel {
   padding: 20px;
-    margin: 0.5rem 0 0.15rem 0;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    background-clip: padding-box;
-    background-color: #fff
+  margin: 0.5rem 0 0.15rem 0;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background-clip: padding-box;
+  background-color: #fff
 }
 .card {
   position: relative;
-    overflow: hidden;
-    margin: 0.5rem 0 0.15rem 0;
-    background-color: #fff;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    background-clip: padding-box
+  overflow: hidden;
+  margin: 0.5rem 0 0.15rem 0;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background-clip: padding-box
 }
 .card .card-title {
   color: #fff;
@@ -3186,12 +3212,16 @@ small {
 .card .card-content .card-title {
   line-height: 48px
 }
-.card .card-action {
+.card .card-section{
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
+  padding: 20px
+}
+.card .card-action{
   border-top: 1px solid rgba(160, 160, 160, 0.2);
   padding: 20px
 }
 .card .card-action a {
-  color: #ffab40;
+  color: #303F9F;
   margin-right: 20px;
   -webkit-transition: color .3s ease;
   -moz-transition: color .3s ease;
@@ -3201,7 +3231,7 @@ small {
   text-transform: uppercase
 }
 .card .card-action a:hover {
-  color: #ffd8a6
+  color: #7986CB
 }
 .card .card-reveal {
   padding: 20px;
